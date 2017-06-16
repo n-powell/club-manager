@@ -37,5 +37,10 @@ export class PlayerService {
                                 about: localUpdatedPlayer.about,
                                 twitter: localUpdatedPlayer.twitter,
                                 });
-    }
+  }
+
+  deletePlayer(localPlayerToDelete){
+  var playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
+  playerEntryInFirebase.remove();
+  }
 }

@@ -17,6 +17,12 @@ export class EditPlayerComponent implements OnInit {
 
   beginUpdatingPlayer(playerToUpdate){
   this.playerService.updatePlayer(playerToUpdate);
-}
+  }
+
+  beginDeletingPlayer(playerToDelete){
+    if(confirm("Are you sure you want to delete this player from the club?")){
+      this.playerService.deletePlayer(playerToDelete);
+    }
+  }
 
 }
