@@ -11,7 +11,7 @@ export class Player {
     public weight: number,
     public from: string,
     public about: string,
-    public twitter: string,
+    public twitter: string
 
   ) { }
 }
