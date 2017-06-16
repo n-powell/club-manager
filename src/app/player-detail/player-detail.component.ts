@@ -11,8 +11,8 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class PlayerDetailComponent implements OnInit {
-  playerId: number = null;
-  playerToDisplay: Player;
+  playerId: string;
+  playerToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,9 +23,9 @@ export class PlayerDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.playerId = parseInt(urlParameters['id']);
+      this.playerId = urlParameters['id'];
     });
-    // this.playerToDisplay = this.playerService.getPlayerById(this.playerId);
+    this.playerToDisplay = this.playerService.getPlayerById(this.playerId);
   }
 
 }

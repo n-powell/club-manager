@@ -15,5 +15,9 @@ export class PlayerService {
 
   addPlayer(newPlayer: Player) {
   this.players.push(newPlayer);
-}
+  }
+
+  getPlayerById(playerId: string){
+  return this.database.object('players/' + playerId);
+  }
 }
