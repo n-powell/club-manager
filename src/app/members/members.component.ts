@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { PlayerService } from '../player.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-members',
@@ -10,11 +11,7 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class MembersComponent implements OnInit {
-  players: Player[] = [
-    new Player("Fanendo Adi","Foreward", true,9,120000,5,26,6.4,185,"Nigeria","Loan purchase option exercised and signed as a Designated Player from FC Copenhagen on June 23, 2014.","@FANENDO"),
-    new Player("Fanendo Adi","Foreward", true,9,120000,5,26,6.4,185,"Nigeria","Loan purchase option exercised and signed as a Designated Player from FC Copenhagen on June 23, 2014.","@FANENDO"),
-    new Player("Fanendo Adi","Foreward", true,9,120000,5,26,6.4,185,"Nigeria","Loan purchase option exercised and signed as a Designated Player from FC Copenhagen on June 23, 2014.","@FANENDO")
-  ];
+  players: FirebaseListObservable<any[]>;
 
   goToDetailPage(clickedPlayer: Player) {
   this.router.navigate(['players', clickedPlayer.name]);
@@ -23,7 +20,7 @@ export class MembersComponent implements OnInit {
   constructor(private router: Router, private playerService: PlayerService) { }
 
   ngOnInit() {
-    // this.players = this.playerService.getPlayers(); 
+    this.players = this.playerService.getPlayers();
   }
 
 }
