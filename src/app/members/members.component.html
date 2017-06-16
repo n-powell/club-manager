@@ -2,3 +2,7 @@
 <div class="container">
   <p>Here are the members</p>
 </div>
+
+<div *ngFor="let player of players">
+    <h3>{{player.name}} <small>playing</small> {{player.position}}</h3>
+</div>
