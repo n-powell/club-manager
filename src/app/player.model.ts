@@ -2,7 +2,7 @@ export class Player {
   constructor (
     public name: string,
     public position: string,
-    public starting: boolean,
+    public starting: string,
     public number: number,
     public salary: number,
     public goals: number,

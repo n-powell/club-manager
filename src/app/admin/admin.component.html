@@ -19,7 +19,7 @@
       <div>
         <label>Player starting:</label>
         <br>
-        <input #newStarting type="boolean">
+        <input #newStarting>
       </div>
 
       <div>
@@ -29,7 +29,7 @@
       </div>
 
       <div>
-        <label>Player salary:</label>
+        <label>Player Salary:</label>
         <br>
         <input #newSalary type="number">
       </div>
@@ -41,13 +41,19 @@
       </div>
 
       <div>
-        <label>Player height:</label>
+        <label>Player Age:</label>
+        <br>
+        <input #newAge type="number">
+      </div>
+
+      <div>
+        <label>Player Height:</label>
         <br>
         <input #newHeight type="number">
       </div>
 
       <div>
-        <label>Player weight:</label>
+        <label>Player Weight:</label>
         <br>
         <input #newWeight type="number">
       </div>
@@ -65,12 +71,12 @@
       </div>
 
       <div>
-        <label>Player twitter:</label>
+        <label>Player Twitter:</label>
         <br>
         <input #newTwitter>
       </div>
-      <button (click)="submitForm(newName.value, newPosition.value, newStarting.value, newNumber.value, newSalary.value, newGoals.value, newHeight.value,
-      newWeight.value, newFrom.value, newAbout.value, newTwitter.value)">Add</button>
+
+      <button (click)="submitForm(newName.value, newPosition.value, newStarting.value, newNumber.value, newSalary.value, newGoals.value, newAge.value, newHeight.value, newWeight.value, newFrom.value, newAbout.value, newTwitter.value)">Add</button>
     </div>
   </div>
 </div>
