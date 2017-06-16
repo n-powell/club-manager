@@ -1,0 +1,80 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Player to the Team</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Player Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Player Position:</label>
+        <br>
+        <input #newPosition>
+      </div>
+
+      <div>
+        <label>Player starting:</label>
+        <br>
+        <input #newStarting type="boolean">
+      </div>
+
+      <div>
+        <label>Player Number:</label>
+        <br>
+        <input #newNumber type="number">
+      </div>
+
+      <div>
+        <label>Player salary:</label>
+        <br>
+        <input #newSalary type="number">
+      </div>
+
+      <div>
+        <label>Player Goals:</label>
+        <br>
+        <input #newGoals type="number">
+      </div>
+
+      <div>
+        <label>Player height:</label>
+        <br>
+        <input #newHeight type="number">
+      </div>
+
+      <div>
+        <label>Player weight:</label>
+        <br>
+        <input #newWeight type="number">
+      </div>
+
+      <div>
+        <label>Player From:</label>
+        <br>
+        <input #newFrom>
+      </div>
+
+      <div>
+        <label>Player About:</label>
+        <br>
+        <textarea #newAbout></textarea>
+      </div>
+
+      <div>
+        <label>Player twitter:</label>
+        <br>
+        <input #newTwitter>
+      </div>
+      <button (click)="submitForm(newName.value, newPosition.value, newStarting.value, newNumber.value, newSalary.value, newGoals.value, newHeight.value,
+      newWeight.value, newFrom.value, newAbout.value, newTwitter.value)">Add</button>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
