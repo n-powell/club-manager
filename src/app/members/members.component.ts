@@ -3,6 +3,7 @@ import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { PlayerService } from '../player.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { SalarySortPipe } from '../salary.pipe'
 
 @Component({
   selector: 'app-members',
@@ -13,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class MembersComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterBySalarySortPipe: string = "allPlayers";
 
   goToDetailPage(clickedPlayer) {
     this.router.navigate(['players', clickedPlayer.$key]);
@@ -22,6 +24,10 @@ export class MembersComponent implements OnInit {
 
   ngOnInit() {
     this.players = this.playerService.getPlayers();
+  }
+
+  onChange(optionFromMenu) {
+  this.filterBySalarySortPipe = optionFromMenu;
   }
 
 }

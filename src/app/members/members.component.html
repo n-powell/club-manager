@@ -3,6 +3,12 @@
   <p>Here are the members</p>
 </div>
 
+<select class="form-control" (change)="onChange($event.target.value)">
+  <option value="allPlayers" selected="selected">All Players</option>
+  <option value="expensive">Expensive Players</option>
+  <option value="cheap">Cheap Players</option>
+</select>
+
 <div *ngFor="let player of players | async" class="panel panel-default">
     <div class="panel-body">
     <h3 (click)="goToDetailPage(player)">{{player.name}} <small>playing</small> {{player.position}}</h3>
