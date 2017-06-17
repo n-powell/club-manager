@@ -14,7 +14,7 @@ import { MembersComponent } from './members/members.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
-import { SalarySortPipe } from './salary.pipe';
+import { SortBySalaryPipe } from './salary.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +32,7 @@ export const firebaseConfig = {
     PlayerDetailComponent,
     AdminComponent,
     EditPlayerComponent,
-    SalarySortPipe
+    SortBySalaryPipe
   ],
   imports: [
     BrowserModule,

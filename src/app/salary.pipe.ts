@@ -1,23 +1,23 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Player } from './player.model'
+import { Player } from './player.model';
 
 @Pipe({
-  name: 'SalarySort',
+  name: 'sortBySalary',
   pure: false
 })
-export class SalarySortPipe implements PipeTransform {
+export class SortBySalaryPipe implements PipeTransform {
 
-  transform(input: Player[], salary){
-    var output: Player[] = [];
-    if(salary === "cheap") {
-      for (var i = 0; i < input.length; i++) {
+  transform(input: Player[], salary) {
+    const output: Player[] = [];
+    if (salary === 'cheap') {
+      for (let i = 0; i < input.length; i++) {
         if (input[i].salary <= 10000) {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (salary === "expensive") {
-        for (var i = 0; i < input.length; i++) {
+    } else if (salary === 'expensive') {
+        for (let i = 0; i < input.length; i++) {
           if (input[i].salary > 10000) {
             output.push(input[i]);
           }

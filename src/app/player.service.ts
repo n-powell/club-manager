@@ -17,12 +17,12 @@ export class PlayerService {
   this.players.push(newPlayer);
   }
 
-  getPlayerById(playerId: string){
+  getPlayerById(playerId: string) {
   return this.database.object('players/' + playerId);
   }
 
-  updatePlayer(localUpdatedPlayer){
-    var playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
+  updatePlayer(localUpdatedPlayer) {
+    const playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
     playerEntryInFirebase.update({
                                 name: localUpdatedPlayer.name,
                                 position: localUpdatedPlayer.position,
@@ -39,8 +39,8 @@ export class PlayerService {
                                 });
   }
 
-  deletePlayer(localPlayerToDelete){
-  var playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
+  deletePlayer(localPlayerToDelete) {
+  const playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
   playerEntryInFirebase.remove();
   }
 }

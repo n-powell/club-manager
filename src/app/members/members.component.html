@@ -9,7 +9,7 @@
   <option value="cheap">Cheap Players</option>
 </select>
 
-<div *ngFor="let player of players | async" class="panel panel-default">
+<div *ngFor="let player of players | async | sortBySalary:filterBySortBySalaryPipe" class="panel panel-default">
     <div class="panel-body">
     <h3 (click)="goToDetailPage(player)">{{player.name}} <small>playing</small> {{player.position}}</h3>
     <div *ngIf="currentRoute === '/admin'">

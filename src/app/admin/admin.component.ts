@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
 
 
   submitForm(name: string, position: string, starting: string, number: number, salary: number, goals: number, age: number, height: number, weight: number, from: string, about: string, twitter: string) {
-    let newPlayer: Player = new Player(name, position, starting, number, salary, goals, age, height, weight, from, about, twitter);
+    const newPlayer: Player = new Player(name, position, starting, number, salary, goals, age, height, weight, from, about, twitter);
 
     this.playerService.addPlayer(newPlayer);
   }
