@@ -1,5 +1,6 @@
 # ClubManager
 
+This is a quick mock up site for a futbol club. This site allows admin users to add players to the club giving 12 keys; name, position, starting, age, salary, goals, player number, height, weight, hometown, about, and twitter.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
@@ -12,7 +13,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+Clone directory from github. cd into clone directory in terminal.
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Rung ng serve to run server. Navigate to localhost:4200 in a browser.
 
 ## Running unit tests
 
@@ -26,3 +29,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## License
+
+Licensed under MIT.
+
+created by Nick Powell
